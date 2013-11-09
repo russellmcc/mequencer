@@ -3205,6 +3205,14 @@ NS Package M08A</description>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="IC11" library="SparkFun-AnalogIC" deviceset="NE555" device="D"/>
 <part name="IC12" library="SparkFun-AnalogIC" deviceset="NE555" device="D"/>
+<part name="R22" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1k"/>
+<part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="GND11" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="1uF"/>
+<part name="GND12" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="C4" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="1uF"/>
+<part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="R23" library="SparkFun-Electromechanical" deviceset="TRIMPOT" device="-2"/>
 </parts>
 <sheets>
 <sheet>
@@ -3300,6 +3308,15 @@ NS Package M08A</description>
 <instance part="IC10" gate="P" x="223.52" y="116.84"/>
 <instance part="IC11" gate="G$1" x="40.64" y="17.78"/>
 <instance part="IC12" gate="G$1" x="73.66" y="17.78"/>
+<instance part="R22" gate="G$1" x="25.4" y="17.78"/>
+<instance part="SUPPLY8" gate="G$1" x="22.86" y="30.48"/>
+<instance part="GND11" gate="1" x="22.86" y="2.54"/>
+<instance part="C3" gate="G$1" x="5.08" y="12.7" rot="R180"/>
+<instance part="IC6" gate="C" x="20.32" y="12.7"/>
+<instance part="GND12" gate="1" x="60.96" y="2.54"/>
+<instance part="C4" gate="G$1" x="58.42" y="25.4" rot="R180"/>
+<instance part="SUPPLY9" gate="G$1" x="71.12" y="30.48"/>
+<instance part="R23" gate="R?" x="53.34" y="30.48" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -3383,6 +3400,31 @@ NS Package M08A</description>
 <pinref part="R20" gate="G$1" pin="1"/>
 <pinref part="SUPPLY7" gate="G$1" pin="5V"/>
 <wire x1="30.48" y1="86.36" x2="33.02" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SUPPLY8" gate="G$1" pin="5V"/>
+<wire x1="22.86" y1="30.48" x2="50.8" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="R22" gate="G$1" pin="1"/>
+<wire x1="20.32" y1="17.78" x2="20.32" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="30.48" x2="22.86" y2="30.48" width="0.1524" layer="91"/>
+<junction x="22.86" y="30.48"/>
+<pinref part="IC11" gate="G$1" pin="/RES"/>
+<pinref part="IC11" gate="G$1" pin="VCC+"/>
+<wire x1="50.8" y1="22.86" x2="50.8" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="25.4" x2="50.8" y2="30.48" width="0.1524" layer="91"/>
+<junction x="50.8" y="25.4"/>
+</segment>
+<segment>
+<pinref part="R23" gate="R?" pin="WIPER"/>
+<pinref part="SUPPLY9" gate="G$1" pin="5V"/>
+<wire x1="58.42" y1="30.48" x2="71.12" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="IC12" gate="G$1" pin="/RES"/>
+<pinref part="IC12" gate="G$1" pin="VCC+"/>
+<wire x1="83.82" y1="22.86" x2="83.82" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="25.4" x2="83.82" y2="30.48" width="0.1524" layer="91"/>
+<junction x="83.82" y="25.4"/>
+<wire x1="83.82" y1="30.48" x2="71.12" y2="30.48" width="0.1524" layer="91"/>
+<junction x="71.12" y="30.48"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -3557,6 +3599,22 @@ NS Package M08A</description>
 <pinref part="GND10" gate="1" pin="GND"/>
 <wire x1="30.48" y1="63.5" x2="30.48" y2="60.96" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IC11" gate="G$1" pin="GND"/>
+<wire x1="50.8" y1="10.16" x2="50.8" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="GND11" gate="1" pin="GND"/>
+<wire x1="50.8" y1="5.08" x2="22.86" y2="5.08" width="0.1524" layer="91"/>
+<junction x="22.86" y="5.08"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="22.86" y1="5.08" x2="5.08" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="20.32" x2="58.42" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="58.42" y1="5.08" x2="60.96" y2="5.08" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$2" class="0">
 <segment>
@@ -3610,6 +3668,11 @@ NS Package M08A</description>
 <pinref part="IC2" gate="G$1" pin="CLK"/>
 <wire x1="17.78" y1="99.06" x2="2.54" y2="99.06" width="0.1524" layer="91"/>
 <label x="2.54" y="99.06" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC6" gate="C" pin="I"/>
+<wire x1="10.16" y1="12.7" x2="7.62" y2="12.7" width="0.1524" layer="91"/>
+<label x="7.62" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LOAD" class="0">
@@ -4263,6 +4326,53 @@ NS Package M08A</description>
 <pinref part="IC10" gate="B" pin="+IN"/>
 <wire x1="30.48" y1="76.2" x2="38.1" y2="76.2" width="0.1524" layer="91"/>
 <junction x="30.48" y="76.2"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="IC11" gate="G$1" pin="DIS"/>
+<pinref part="R22" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="IC11" gate="G$1" pin="TRE"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="5.08" y1="15.24" x2="5.08" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="25.4" x2="30.48" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="IC6" gate="C" pin="O"/>
+<pinref part="IC11" gate="G$1" pin="TRI"/>
+<wire x1="30.48" y1="12.7" x2="30.48" y2="10.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="R23" gate="R?" pin="CW"/>
+<wire x1="53.34" y1="25.4" x2="53.34" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="IC12" gate="G$1" pin="DIS"/>
+<wire x1="53.34" y1="17.78" x2="63.5" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="IC12" gate="G$1" pin="TRE"/>
+<wire x1="58.42" y1="27.94" x2="63.5" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="27.94" x2="63.5" y2="25.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="IC11" gate="G$1" pin="OUT"/>
+<wire x1="50.8" y1="17.78" x2="50.8" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="15.24" x2="53.34" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="15.24" x2="53.34" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="IC12" gate="G$1" pin="TRI"/>
+<wire x1="53.34" y1="10.16" x2="63.5" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
