@@ -3630,7 +3630,6 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <part name="C6" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="10uF"/>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M20" device=""/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M20" device=""/>
-<part name="FRAME2" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="U$1" library="SparkFun-Connectors" deviceset="M04X2" device=""/>
@@ -3655,6 +3654,7 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <part name="C23" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value=".1uF"/>
 <part name="C24" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value=".1uF"/>
 <part name="C25" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value=".1uF"/>
+<part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -3667,9 +3667,9 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <instance part="SUPPLY2" gate="G$1" x="63.5" y="165.1"/>
 <instance part="GND1" gate="1" x="63.5" y="137.16"/>
 <instance part="C1" gate="G$1" x="63.5" y="147.32" rot="R90"/>
-<instance part="C2" gate="G$1" x="27.94" y="139.7" rot="R180"/>
-<instance part="GND2" gate="1" x="27.94" y="129.54"/>
-<instance part="R1" gate="G$1" x="20.32" y="144.78"/>
+<instance part="C2" gate="G$1" x="33.02" y="139.7" rot="R180"/>
+<instance part="GND2" gate="1" x="33.02" y="132.08"/>
+<instance part="R1" gate="G$1" x="25.4" y="154.94"/>
 <instance part="U$2" gate="G$1" x="96.52" y="152.4" rot="R180"/>
 <instance part="U$3" gate="G$1" x="96.52" y="167.64" rot="R180"/>
 <instance part="GND3" gate="1" x="86.36" y="137.16"/>
@@ -3738,13 +3738,11 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <instance part="GND16" gate="1" x="21.59" y="163.83"/>
 <instance part="C5" gate="G$1" x="26.67" y="173.99" rot="R180"/>
 <instance part="C6" gate="G$1" x="55.88" y="172.72" rot="R180"/>
-<instance part="JP2" gate="G$1" x="12.7" y="-81.28"/>
-<instance part="JP3" gate="G$1" x="44.45" y="-81.28"/>
-<instance part="FRAME2" gate="G$1" x="0" y="-195.58"/>
-<instance part="FRAME2" gate="G$2" x="147.32" y="-195.58"/>
-<instance part="GND7" gate="1" x="38.1" y="-30.48"/>
-<instance part="SUPPLY1" gate="G$1" x="67.31" y="-25.4"/>
-<instance part="U$1" gate="G$1" x="88.9" y="-39.37"/>
+<instance part="JP2" gate="G$1" x="63.5" y="71.12"/>
+<instance part="JP3" gate="G$1" x="95.25" y="71.12"/>
+<instance part="GND7" gate="1" x="88.9" y="121.92"/>
+<instance part="SUPPLY1" gate="G$1" x="118.11" y="127"/>
+<instance part="U$1" gate="G$1" x="81.28" y="62.23"/>
 <instance part="SUPPLY13" gate="G$1" x="92.71" y="181.61"/>
 <instance part="GND4" gate="1" x="237.49" y="100.33"/>
 <instance part="C7" gate="G$1" x="156.21" y="180.34" rot="R180"/>
@@ -3766,6 +3764,7 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <instance part="C23" gate="G$1" x="110.49" y="180.34" rot="R180"/>
 <instance part="C24" gate="G$1" x="105.41" y="180.34" rot="R180"/>
 <instance part="C25" gate="G$1" x="100.33" y="180.34" rot="R180"/>
+<instance part="R2" gate="G$1" x="25.4" y="149.86"/>
 </instances>
 <busses>
 </busses>
@@ -3852,9 +3851,9 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="20"/>
-<label x="55.88" y="-27.94" size="1.778" layer="95"/>
-<wire x1="54.61" y1="-27.94" x2="62.23" y2="-26.67" width="0.1524" layer="91"/>
-<wire x1="62.23" y1="-26.67" x2="67.31" y2="-25.4" width="0.1524" layer="91"/>
+<label x="106.68" y="124.46" size="1.778" layer="95"/>
+<wire x1="105.41" y1="124.46" x2="113.03" y2="125.73" width="0.1524" layer="91"/>
+<wire x1="113.03" y1="125.73" x2="118.11" y2="127" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="G$1" pin="5V"/>
 </segment>
 <segment>
@@ -3918,20 +3917,6 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <junction x="100.33" y="182.88"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="TRE"/>
-<wire x1="35.56" y1="160.02" x2="27.94" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="160.02" x2="27.94" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="TRI"/>
-<wire x1="27.94" y1="144.78" x2="35.56" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="144.78" x2="27.94" y2="142.24" width="0.1524" layer="91"/>
-<junction x="27.94" y="144.78"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="25.4" y1="144.78" x2="27.94" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="GND"/>
@@ -3947,7 +3932,6 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="27.94" y1="134.62" x2="27.94" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="RING"/>
@@ -4030,11 +4014,11 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="20"/>
-<label x="24.13" y="-27.94" size="1.778" layer="95"/>
-<wire x1="22.86" y1="-27.94" x2="38.1" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="-27.94" x2="38.1" y2="-29.21" width="0.1524" layer="91"/>
+<label x="74.93" y="124.46" size="1.778" layer="95"/>
+<wire x1="73.66" y1="124.46" x2="88.9" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="124.46" x2="88.9" y2="123.19" width="0.1524" layer="91"/>
 <pinref part="GND7" gate="1" pin="GND"/>
-<junction x="38.1" y="-27.94"/>
+<junction x="88.9" y="124.46"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="P" pin="GND"/>
@@ -4094,8 +4078,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="18"/>
-<wire x1="22.86" y1="-33.02" x2="25.4" y2="-33.02" width="0.1524" layer="91"/>
-<label x="24.13" y="-33.02" size="1.778" layer="95"/>
+<wire x1="73.66" y1="119.38" x2="76.2" y2="119.38" width="0.1524" layer="91"/>
+<label x="74.93" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PAUSE_OUT" class="0">
@@ -4106,9 +4090,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="19"/>
-<wire x1="22.86" y1="-30.48" x2="24.13" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="-30.48" x2="24.13" y2="-30.48" width="0.1524" layer="91"/>
-<label x="24.13" y="-30.48" size="1.778" layer="95"/>
+<wire x1="76.2" y1="121.92" x2="73.66" y2="121.92" width="0.1524" layer="91"/>
+<label x="74.93" y="121.92" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CLOCK" class="0">
@@ -4148,8 +4131,11 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <label x="154.94" y="144.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="53.34" y1="-35.56" x2="57.15" y2="-35.56" width="0.1524" layer="91"/>
-<label x="57.15" y="-35.56" size="1.778" layer="95"/>
+<wire x1="104.14" y1="116.84" x2="105.41" y2="116.84" width="0.1524" layer="91"/>
+<label x="107.95" y="116.84" size="1.778" layer="95"/>
+<pinref part="JP3" gate="G$1" pin="17"/>
+<wire x1="105.41" y1="116.84" x2="107.95" y2="116.84" width="0.1524" layer="91"/>
+<junction x="105.41" y="116.84"/>
 </segment>
 </net>
 <net name="LOAD0" class="0">
@@ -4160,8 +4146,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="2"/>
-<wire x1="96.52" y1="-34.29" x2="100.33" y2="-34.29" width="0.1524" layer="91"/>
-<label x="97.79" y="-34.29" size="1.778" layer="95"/>
+<wire x1="88.9" y1="67.31" x2="92.71" y2="67.31" width="0.1524" layer="91"/>
+<label x="90.17" y="67.31" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LOAD1" class="0">
@@ -4172,8 +4158,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="4"/>
-<wire x1="96.52" y1="-36.83" x2="100.33" y2="-36.83" width="0.1524" layer="91"/>
-<label x="97.79" y="-36.83" size="1.778" layer="95"/>
+<wire x1="88.9" y1="64.77" x2="92.71" y2="64.77" width="0.1524" layer="91"/>
+<label x="90.17" y="64.77" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LOAD2" class="0">
@@ -4184,8 +4170,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="6"/>
-<wire x1="96.52" y1="-39.37" x2="100.33" y2="-39.37" width="0.1524" layer="91"/>
-<label x="99.06" y="-39.37" size="1.778" layer="95"/>
+<wire x1="88.9" y1="62.23" x2="92.71" y2="62.23" width="0.1524" layer="91"/>
+<label x="91.44" y="62.23" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LOAD3" class="0">
@@ -4196,8 +4182,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="8"/>
-<wire x1="96.52" y1="-41.91" x2="100.33" y2="-41.91" width="0.1524" layer="91"/>
-<label x="99.06" y="-41.91" size="1.778" layer="95"/>
+<wire x1="88.9" y1="59.69" x2="92.71" y2="59.69" width="0.1524" layer="91"/>
+<label x="91.44" y="59.69" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="COUNT0" class="0">
@@ -4336,8 +4322,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="1"/>
-<wire x1="81.28" y1="-34.29" x2="78.74" y2="-34.29" width="0.1524" layer="91"/>
-<label x="77.47" y="-34.29" size="1.778" layer="95"/>
+<wire x1="73.66" y1="67.31" x2="71.12" y2="67.31" width="0.1524" layer="91"/>
+<label x="69.85" y="67.31" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RESET1" class="0">
@@ -4348,8 +4334,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="3"/>
-<wire x1="81.28" y1="-36.83" x2="78.74" y2="-36.83" width="0.1524" layer="91"/>
-<label x="77.47" y="-36.83" size="1.778" layer="95"/>
+<wire x1="73.66" y1="64.77" x2="71.12" y2="64.77" width="0.1524" layer="91"/>
+<label x="69.85" y="64.77" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RESET2" class="0">
@@ -4359,8 +4345,11 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <label x="114.3" y="165.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="82.55" y1="-39.37" x2="78.74" y2="-39.37" width="0.1524" layer="91"/>
-<label x="78.74" y="-39.37" size="1.778" layer="95"/>
+<wire x1="74.93" y1="62.23" x2="73.66" y2="62.23" width="0.1524" layer="91"/>
+<label x="71.12" y="62.23" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="5"/>
+<wire x1="73.66" y1="62.23" x2="71.12" y2="62.23" width="0.1524" layer="91"/>
+<junction x="73.66" y="62.23"/>
 </segment>
 </net>
 <net name="RESET3" class="0">
@@ -4371,8 +4360,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="7"/>
-<wire x1="81.28" y1="-41.91" x2="78.74" y2="-41.91" width="0.1524" layer="91"/>
-<label x="78.74" y="-41.91" size="1.778" layer="95"/>
+<wire x1="73.66" y1="59.69" x2="71.12" y2="59.69" width="0.1524" layer="91"/>
+<label x="71.12" y="59.69" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LOW_OUT" class="0">
@@ -4394,8 +4383,11 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <label x="124.46" y="116.84" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="27.94" y1="-76.2" x2="21.59" y2="-76.2" width="0.1524" layer="91"/>
-<label x="25.4" y="-76.2" size="1.778" layer="95"/>
+<wire x1="78.74" y1="76.2" x2="73.66" y2="76.2" width="0.1524" layer="91"/>
+<label x="76.2" y="76.2" size="1.778" layer="95"/>
+<pinref part="JP2" gate="G$1" pin="1"/>
+<wire x1="73.66" y1="76.2" x2="72.39" y2="76.2" width="0.1524" layer="91"/>
+<junction x="73.66" y="76.2"/>
 </segment>
 </net>
 <net name="CHANNEL1" class="0">
@@ -4405,8 +4397,11 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <label x="124.46" y="114.3" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="21.59" y1="-73.66" x2="27.94" y2="-73.66" width="0.1524" layer="91"/>
-<label x="24.13" y="-73.66" size="1.778" layer="95"/>
+<wire x1="72.39" y1="78.74" x2="73.66" y2="78.74" width="0.1524" layer="91"/>
+<label x="74.93" y="78.74" size="1.778" layer="95"/>
+<pinref part="JP2" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="78.74" x2="78.74" y2="78.74" width="0.1524" layer="91"/>
+<junction x="73.66" y="78.74"/>
 </segment>
 </net>
 <net name="CHANNEL2" class="0">
@@ -4417,8 +4412,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="3"/>
-<wire x1="22.86" y1="-71.12" x2="27.94" y2="-71.12" width="0.1524" layer="91"/>
-<label x="24.13" y="-71.12" size="1.778" layer="95"/>
+<wire x1="73.66" y1="81.28" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
+<label x="74.93" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CHANNEL3" class="0">
@@ -4436,9 +4431,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="5"/>
-<wire x1="22.86" y1="-66.04" x2="26.67" y2="-66.04" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="-66.04" x2="26.67" y2="-66.04" width="0.1524" layer="91"/>
-<label x="24.13" y="-66.04" size="1.778" layer="95"/>
+<wire x1="73.66" y1="86.36" x2="78.74" y2="86.36" width="0.1524" layer="91"/>
+<label x="74.93" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CHANNEL5" class="0">
@@ -4449,8 +4443,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="6"/>
-<wire x1="22.86" y1="-63.5" x2="26.67" y2="-63.5" width="0.1524" layer="91"/>
-<label x="24.13" y="-63.5" size="1.778" layer="95"/>
+<wire x1="73.66" y1="88.9" x2="77.47" y2="88.9" width="0.1524" layer="91"/>
+<label x="74.93" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CHANNEL6" class="0">
@@ -4461,8 +4455,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="7"/>
-<wire x1="22.86" y1="-60.96" x2="26.67" y2="-60.96" width="0.1524" layer="91"/>
-<label x="24.13" y="-60.96" size="1.778" layer="95"/>
+<wire x1="73.66" y1="91.44" x2="77.47" y2="91.44" width="0.1524" layer="91"/>
+<label x="74.93" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CHANNEL7" class="0">
@@ -4472,8 +4466,11 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <label x="124.46" y="99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="21.59" y1="-58.42" x2="26.67" y2="-58.42" width="0.1524" layer="91"/>
-<label x="24.13" y="-58.42" size="1.778" layer="95"/>
+<wire x1="72.39" y1="93.98" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
+<label x="74.93" y="93.98" size="1.778" layer="95"/>
+<pinref part="JP2" gate="G$1" pin="8"/>
+<wire x1="73.66" y1="93.98" x2="77.47" y2="93.98" width="0.1524" layer="91"/>
+<junction x="73.66" y="93.98"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -4502,8 +4499,11 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <label x="172.72" y="116.84" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="58.42" y1="-76.2" x2="53.34" y2="-76.2" width="0.1524" layer="91"/>
-<label x="55.88" y="-76.2" size="1.778" layer="95"/>
+<wire x1="109.22" y1="76.2" x2="105.41" y2="76.2" width="0.1524" layer="91"/>
+<label x="106.68" y="76.2" size="1.778" layer="95"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
+<wire x1="105.41" y1="76.2" x2="104.14" y2="76.2" width="0.1524" layer="91"/>
+<junction x="105.41" y="76.2"/>
 </segment>
 </net>
 <net name="LED1" class="0">
@@ -4514,8 +4514,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="2"/>
-<wire x1="54.61" y1="-73.66" x2="58.42" y2="-73.66" width="0.1524" layer="91"/>
-<label x="55.88" y="-73.66" size="1.778" layer="95"/>
+<wire x1="105.41" y1="78.74" x2="109.22" y2="78.74" width="0.1524" layer="91"/>
+<label x="106.68" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED2" class="0">
@@ -4526,9 +4526,9 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="3"/>
-<wire x1="54.61" y1="-71.12" x2="58.42" y2="-71.12" width="0.1524" layer="91"/>
-<label x="55.88" y="-71.12" size="1.778" layer="95"/>
-<label x="55.88" y="-71.12" size="1.778" layer="95"/>
+<wire x1="105.41" y1="81.28" x2="109.22" y2="81.28" width="0.1524" layer="91"/>
+<label x="106.68" y="81.28" size="1.778" layer="95"/>
+<label x="106.68" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED3" class="0">
@@ -4539,9 +4539,9 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="4"/>
-<wire x1="54.61" y1="-68.58" x2="58.42" y2="-68.58" width="0.1524" layer="91"/>
-<label x="55.88" y="-68.58" size="1.778" layer="95"/>
-<label x="55.88" y="-68.58" size="1.778" layer="95"/>
+<wire x1="105.41" y1="83.82" x2="109.22" y2="83.82" width="0.1524" layer="91"/>
+<label x="106.68" y="83.82" size="1.778" layer="95"/>
+<label x="106.68" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED4" class="0">
@@ -4552,8 +4552,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="5"/>
-<wire x1="54.61" y1="-66.04" x2="58.42" y2="-66.04" width="0.1524" layer="91"/>
-<label x="55.88" y="-66.04" size="1.778" layer="95"/>
+<wire x1="105.41" y1="86.36" x2="109.22" y2="86.36" width="0.1524" layer="91"/>
+<label x="106.68" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED5" class="0">
@@ -4564,8 +4564,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="6"/>
-<wire x1="54.61" y1="-63.5" x2="58.42" y2="-63.5" width="0.1524" layer="91"/>
-<label x="55.88" y="-63.5" size="1.778" layer="95"/>
+<wire x1="105.41" y1="88.9" x2="109.22" y2="88.9" width="0.1524" layer="91"/>
+<label x="106.68" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED6" class="0">
@@ -4576,9 +4576,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="7"/>
-<wire x1="54.61" y1="-60.96" x2="57.15" y2="-60.96" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="-60.96" x2="57.15" y2="-60.96" width="0.1524" layer="91"/>
-<label x="55.88" y="-60.96" size="1.778" layer="95"/>
+<wire x1="105.41" y1="91.44" x2="109.22" y2="91.44" width="0.1524" layer="91"/>
+<label x="106.68" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED7" class="0">
@@ -4589,8 +4588,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="8"/>
-<wire x1="54.61" y1="-58.42" x2="58.42" y2="-58.42" width="0.1524" layer="91"/>
-<label x="55.88" y="-58.42" size="1.778" layer="95"/>
+<wire x1="105.41" y1="93.98" x2="109.22" y2="93.98" width="0.1524" layer="91"/>
+<label x="106.68" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED8" class="0">
@@ -4601,8 +4600,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="9"/>
-<wire x1="54.61" y1="-55.88" x2="58.42" y2="-55.88" width="0.1524" layer="91"/>
-<label x="55.88" y="-55.88" size="1.778" layer="95"/>
+<wire x1="105.41" y1="96.52" x2="109.22" y2="96.52" width="0.1524" layer="91"/>
+<label x="106.68" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED9" class="0">
@@ -4613,8 +4612,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="10"/>
-<wire x1="54.61" y1="-53.34" x2="58.42" y2="-53.34" width="0.1524" layer="91"/>
-<label x="55.88" y="-53.34" size="1.778" layer="95"/>
+<wire x1="105.41" y1="99.06" x2="109.22" y2="99.06" width="0.1524" layer="91"/>
+<label x="106.68" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED10" class="0">
@@ -4625,8 +4624,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="11"/>
-<wire x1="54.61" y1="-50.8" x2="57.15" y2="-50.8" width="0.1524" layer="91"/>
-<label x="55.88" y="-50.8" size="1.778" layer="95"/>
+<wire x1="105.41" y1="101.6" x2="107.95" y2="101.6" width="0.1524" layer="91"/>
+<label x="106.68" y="101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED11" class="0">
@@ -4637,8 +4636,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="12"/>
-<wire x1="54.61" y1="-48.26" x2="57.15" y2="-48.26" width="0.1524" layer="91"/>
-<label x="55.88" y="-48.26" size="1.778" layer="95"/>
+<wire x1="105.41" y1="104.14" x2="107.95" y2="104.14" width="0.1524" layer="91"/>
+<label x="106.68" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED12" class="0">
@@ -4649,9 +4648,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="13"/>
-<wire x1="54.61" y1="-45.72" x2="57.15" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="-45.72" x2="57.15" y2="-45.72" width="0.1524" layer="91"/>
-<label x="57.15" y="-45.72" size="1.778" layer="95"/>
+<wire x1="105.41" y1="106.68" x2="109.22" y2="106.68" width="0.1524" layer="91"/>
+<label x="107.95" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED13" class="0">
@@ -4662,9 +4660,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="14"/>
-<wire x1="54.61" y1="-43.18" x2="57.15" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="-43.18" x2="57.15" y2="-43.18" width="0.1524" layer="91"/>
-<label x="57.15" y="-43.18" size="1.778" layer="95"/>
+<wire x1="105.41" y1="109.22" x2="109.22" y2="109.22" width="0.1524" layer="91"/>
+<label x="107.95" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED14" class="0">
@@ -4675,8 +4672,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="15"/>
-<wire x1="54.61" y1="-40.64" x2="58.42" y2="-40.64" width="0.1524" layer="91"/>
-<label x="57.15" y="-40.64" size="1.778" layer="95"/>
+<wire x1="105.41" y1="111.76" x2="109.22" y2="111.76" width="0.1524" layer="91"/>
+<label x="107.95" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LED15" class="0">
@@ -4687,8 +4684,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="16"/>
-<wire x1="54.61" y1="-38.1" x2="58.42" y2="-38.1" width="0.1524" layer="91"/>
-<label x="57.15" y="-38.1" size="1.778" layer="95"/>
+<wire x1="105.41" y1="114.3" x2="109.22" y2="114.3" width="0.1524" layer="91"/>
+<label x="107.95" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -4721,8 +4718,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="9"/>
-<wire x1="22.86" y1="-55.88" x2="26.67" y2="-55.88" width="0.1524" layer="91"/>
-<label x="24.13" y="-55.88" size="1.778" layer="95"/>
+<wire x1="73.66" y1="96.52" x2="77.47" y2="96.52" width="0.1524" layer="91"/>
+<label x="74.93" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CHANNEL9" class="0">
@@ -4733,8 +4730,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="10"/>
-<wire x1="22.86" y1="-53.34" x2="26.67" y2="-53.34" width="0.1524" layer="91"/>
-<label x="24.13" y="-53.34" size="1.778" layer="95"/>
+<wire x1="73.66" y1="99.06" x2="77.47" y2="99.06" width="0.1524" layer="91"/>
+<label x="74.93" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CHANNEL10" class="0">
@@ -4745,8 +4742,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="11"/>
-<wire x1="22.86" y1="-50.8" x2="25.4" y2="-50.8" width="0.1524" layer="91"/>
-<label x="24.13" y="-50.8" size="1.778" layer="95"/>
+<wire x1="73.66" y1="101.6" x2="76.2" y2="101.6" width="0.1524" layer="91"/>
+<label x="74.93" y="101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CHANNEL11" class="0">
@@ -4757,8 +4754,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="12"/>
-<wire x1="22.86" y1="-48.26" x2="26.67" y2="-48.26" width="0.1524" layer="91"/>
-<label x="24.13" y="-48.26" size="1.778" layer="95"/>
+<wire x1="73.66" y1="104.14" x2="77.47" y2="104.14" width="0.1524" layer="91"/>
+<label x="74.93" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CHANNEL12" class="0">
@@ -4769,9 +4766,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="13"/>
-<wire x1="22.86" y1="-45.72" x2="25.4" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="26.67" y1="-45.72" x2="25.4" y2="-45.72" width="0.1524" layer="91"/>
-<label x="24.13" y="-45.72" size="1.778" layer="95"/>
+<wire x1="73.66" y1="106.68" x2="77.47" y2="106.68" width="0.1524" layer="91"/>
+<label x="74.93" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CHANNEL13" class="0">
@@ -4782,8 +4778,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="14"/>
-<wire x1="22.86" y1="-43.18" x2="26.67" y2="-43.18" width="0.1524" layer="91"/>
-<label x="25.4" y="-43.18" size="1.778" layer="95"/>
+<wire x1="73.66" y1="109.22" x2="77.47" y2="109.22" width="0.1524" layer="91"/>
+<label x="76.2" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CHANNEL14" class="0">
@@ -4794,8 +4790,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="15"/>
-<wire x1="22.86" y1="-40.64" x2="26.67" y2="-40.64" width="0.1524" layer="91"/>
-<label x="24.13" y="-40.64" size="1.778" layer="95"/>
+<wire x1="73.66" y1="111.76" x2="77.47" y2="111.76" width="0.1524" layer="91"/>
+<label x="74.93" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CHANNEL15" class="0">
@@ -4806,8 +4802,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="16"/>
-<wire x1="22.86" y1="-38.1" x2="26.67" y2="-38.1" width="0.1524" layer="91"/>
-<label x="24.13" y="-38.1" size="1.778" layer="95"/>
+<wire x1="73.66" y1="114.3" x2="77.47" y2="114.3" width="0.1524" layer="91"/>
+<label x="74.93" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -4986,29 +4982,27 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <net name="CANNEL3" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="4"/>
-<wire x1="22.86" y1="-68.58" x2="26.67" y2="-68.58" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="-68.58" x2="26.67" y2="-68.58" width="0.1524" layer="91"/>
-<label x="24.13" y="-68.58" size="1.778" layer="95"/>
+<wire x1="73.66" y1="83.82" x2="78.74" y2="83.82" width="0.1524" layer="91"/>
+<label x="74.93" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CLOCK_SPEED" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="15.24" y1="144.78" x2="11.43" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="144.78" x2="11.43" y2="144.78" width="0.1524" layer="91"/>
-<label x="10.16" y="144.78" size="1.778" layer="95"/>
+<wire x1="20.32" y1="154.94" x2="11.43" y2="154.94" width="0.1524" layer="91"/>
+<label x="10.16" y="154.94" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="17"/>
-<wire x1="26.67" y1="-35.56" x2="22.86" y2="-35.56" width="0.1524" layer="91"/>
-<label x="25.4" y="-35.56" size="1.778" layer="95"/>
+<wire x1="77.47" y1="116.84" x2="73.66" y2="116.84" width="0.1524" layer="91"/>
+<label x="76.2" y="116.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$29" class="0">
 <segment>
 <pinref part="JP3" gate="G$1" pin="19"/>
-<wire x1="54.61" y1="-30.48" x2="57.15" y2="-30.48" width="0.1524" layer="91"/>
-<label x="55.88" y="-30.48" size="1.778" layer="95"/>
+<wire x1="105.41" y1="121.92" x2="107.95" y2="121.92" width="0.1524" layer="91"/>
+<label x="106.68" y="121.92" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="NOTE_LENGTH" class="0">
@@ -5019,8 +5013,8 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="18"/>
-<wire x1="54.61" y1="-33.02" x2="57.15" y2="-33.02" width="0.1524" layer="91"/>
-<label x="55.88" y="-33.02" size="1.778" layer="95"/>
+<wire x1="105.41" y1="119.38" x2="107.95" y2="119.38" width="0.1524" layer="91"/>
+<label x="106.68" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -5111,6 +5105,33 @@ This is just like the LOCK variant in that the holes are staggared by 5 mil, but
 <junction x="208.28" y="160.02"/>
 <wire x1="208.28" y1="124.46" x2="208.28" y2="142.24" width="0.1524" layer="91"/>
 <junction x="208.28" y="142.24"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="IC1" gate="G$1" pin="DIS"/>
+<wire x1="30.48" y1="149.86" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="35.56" y1="152.4" x2="30.48" y2="154.94" width="0.1524" layer="91"/>
+<junction x="35.56" y="152.4"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="TRE"/>
+<wire x1="35.56" y1="160.02" x2="7.62" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="160.02" x2="7.62" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="TRI"/>
+<wire x1="7.62" y1="149.86" x2="7.62" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="144.78" x2="33.02" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="33.02" y1="144.78" x2="35.56" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="144.78" x2="33.02" y2="142.24" width="0.1524" layer="91"/>
+<junction x="33.02" y="144.78"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="20.32" y1="149.86" x2="7.62" y2="149.86" width="0.1524" layer="91"/>
+<junction x="7.62" y="149.86"/>
 </segment>
 </net>
 </nets>
