@@ -115,7 +115,7 @@
 <wire x1="74.6" y1="0" x2="74.6" y2="74.92" width="0" layer="20"/>
 <wire x1="74.6" y1="74.92" x2="0" y2="74.92" width="0" layer="20"/>
 <wire x1="0" y1="74.92" x2="0" y2="0" width="0" layer="20"/>
-<text x="17.145" y="66.675" size="1.778" layer="25">MEQUENCER SWITCH BOARD V1</text>
+<text x="17.78" y="71.755" size="1.778" layer="25">MEQUENCER SWITCH BOARD V1</text>
 </plain>
 <libraries>
 <library name="SparkFun-Connectors">
