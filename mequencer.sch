@@ -3790,11 +3790,11 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="R13" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603"/>
 <part name="R14" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603"/>
 <part name="IC9" library="linear" deviceset="LF353" device="D"/>
-<part name="R15" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="100k"/>
-<part name="R16" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="100k"/>
-<part name="R17" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="100k"/>
-<part name="R18" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1k"/>
-<part name="R19" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1k"/>
+<part name="R15" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1M"/>
+<part name="R16" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1M"/>
+<part name="R17" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1M"/>
+<part name="R18" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
+<part name="R19" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
 <part name="IC10" library="linear" deviceset="LF353" device="D"/>
 <part name="R20" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="100k"/>
 <part name="R21" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="100k"/>

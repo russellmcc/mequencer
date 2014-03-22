@@ -851,11 +851,11 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R13" library="SparkFun-Resistors" package="0603-RES" value="" x="83.82" y="40.64" rot="R90"/>
 <element name="R14" library="SparkFun-Resistors" package="0603-RES" value="" x="66.167" y="44.831" rot="R270"/>
 <element name="IC9" library="linear" package="SO08" value="LF353D" x="88.9" y="58.42" rot="R270"/>
-<element name="R15" library="SparkFun-Resistors" package="0603-RES" value="100k" x="83.058" y="60.579" rot="R270"/>
-<element name="R16" library="SparkFun-Resistors" package="0603-RES" value="100k" x="81.28" y="53.07" rot="R180"/>
-<element name="R17" library="SparkFun-Resistors" package="0603-RES" value="100k" x="81.28" y="49.53" rot="R180"/>
-<element name="R18" library="SparkFun-Resistors" package="0603-RES" value="1k" x="87.63" y="62.23" rot="R180"/>
-<element name="R19" library="SparkFun-Resistors" package="0603-RES" value="1k" x="91.44" y="62.23" rot="R180"/>
+<element name="R15" library="SparkFun-Resistors" package="0603-RES" value="1M" x="83.058" y="60.579" rot="R270"/>
+<element name="R16" library="SparkFun-Resistors" package="0603-RES" value="1M" x="81.28" y="53.07" rot="R180"/>
+<element name="R17" library="SparkFun-Resistors" package="0603-RES" value="1M" x="81.28" y="49.53" rot="R180"/>
+<element name="R18" library="SparkFun-Resistors" package="0603-RES" value="10k" x="87.63" y="62.23" rot="R180"/>
+<element name="R19" library="SparkFun-Resistors" package="0603-RES" value="10k" x="91.44" y="62.23" rot="R180"/>
 <element name="IC10" library="linear" package="SO08" value="LF353D" x="73.66" y="58.42" rot="R90"/>
 <element name="R20" library="SparkFun-Resistors" package="0603-RES" value="100k" x="69.85" y="63.5" rot="R270"/>
 <element name="R21" library="SparkFun-Resistors" package="0603-RES" value="100k" x="68.707" y="59.817" rot="R270"/>
