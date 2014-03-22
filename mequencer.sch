@@ -3796,8 +3796,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="R18" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1k"/>
 <part name="R19" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1k"/>
 <part name="IC10" library="linear" deviceset="LF353" device="D"/>
-<part name="R20" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1k"/>
-<part name="R21" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1k"/>
+<part name="R20" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="100k"/>
+<part name="R21" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="100k"/>
 <part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="IC11" library="SparkFun-AnalogIC" deviceset="NE555" device="D"/>
@@ -5265,6 +5265,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <wire x1="68.58" y1="50.8" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
 <junction x="68.58" y="50.8"/>
 <label x="71.12" y="50.8" size="1.778" layer="95"/>
+<wire x1="73.66" y1="50.8" x2="68.58" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="17"/>
