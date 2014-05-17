@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2603,6 +2603,10 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="CV" library="erthenvar" deviceset="AUDIO-JACK" device="ERTHENVAR"/>
 <part name="TRIG" library="erthenvar" deviceset="AUDIO-JACK" device="ERTHENVAR"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
+<part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
+<part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
+<part name="R13" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -2644,6 +2648,10 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <instance part="CV" gate="G$1" x="-149.86" y="91.44" rot="R180"/>
 <instance part="TRIG" gate="G$1" x="-149.86" y="76.2" rot="R180"/>
 <instance part="GND6" gate="1" x="-162.56" y="63.5"/>
+<instance part="R2" gate="G$1" x="-165.1" y="96.52" rot="R180"/>
+<instance part="R3" gate="G$1" x="-171.45" y="81.28" rot="R180"/>
+<instance part="R4" gate="G$1" x="-124.46" y="96.52" rot="R180"/>
+<instance part="R13" gate="G$1" x="-123.19" y="76.2" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -2781,9 +2789,9 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <label x="-63.5" y="165.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="CLOCK_IN" gate="G$1" pin="NORM"/>
-<wire x1="-111.76" y1="76.2" x2="-119.38" y2="76.2" width="0.1524" layer="91"/>
-<label x="-121.92" y="76.2" size="1.778" layer="95"/>
+<pinref part="R13" gate="G$1" pin="2"/>
+<wire x1="-128.27" y1="76.2" x2="-132.08" y2="76.2" width="0.1524" layer="91"/>
+<label x="-137.16" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LOAD" class="0">
@@ -2954,14 +2962,14 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </net>
 <net name="CV" class="0">
 <segment>
-<pinref part="CV" gate="G$1" pin="TIP"/>
-<wire x1="-157.48" y1="96.52" x2="-162.56" y2="96.52" width="0.1524" layer="91"/>
-<label x="-162.56" y="96.52" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$2" gate="G$1" pin="17"/>
 <wire x1="-187.96" y1="144.78" x2="-190.5" y2="144.78" width="0.1524" layer="91"/>
 <label x="-190.5" y="144.78" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="-170.18" y1="96.52" x2="-173.99" y2="96.52" width="0.1524" layer="91"/>
+<label x="-173.99" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -2973,17 +2981,14 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </net>
 <net name="CLOCK" class="0">
 <segment>
-<pinref part="CLOCK_IN" gate="G$1" pin="TIP"/>
-<wire x1="-111.76" y1="81.28" x2="-116.84" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="81.28" x2="-116.84" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="CLOCK_OUT" gate="G$1" pin="TIP"/>
-<wire x1="-116.84" y1="96.52" x2="-111.76" y2="96.52" width="0.1524" layer="91"/>
-<label x="-121.92" y="96.52" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$2" gate="G$1" pin="5"/>
 <wire x1="-187.96" y1="160.02" x2="-190.5" y2="160.02" width="0.1524" layer="91"/>
 <label x="-193.04" y="160.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="-129.54" y1="96.52" x2="-132.08" y2="96.52" width="0.1524" layer="91"/>
+<label x="-135.89" y="97.79" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="INT_CLOCK" class="0">
@@ -3000,14 +3005,49 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </net>
 <net name="TRIG" class="0">
 <segment>
-<pinref part="TRIG" gate="G$1" pin="TIP"/>
-<wire x1="-157.48" y1="81.28" x2="-160.02" y2="81.28" width="0.1524" layer="91"/>
-<label x="-160.02" y="81.28" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$2" gate="G$1" pin="19"/>
 <wire x1="-187.96" y1="142.24" x2="-190.5" y2="142.24" width="0.1524" layer="91"/>
 <label x="-190.5" y="142.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="-176.53" y1="81.28" x2="-177.8" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-179.07" y1="81.28" x2="-180.34" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-177.8" y1="81.28" x2="-179.07" y2="81.28" width="0.1524" layer="91"/>
+<label x="-180.34" y="78.74" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="CV" gate="G$1" pin="TIP"/>
+<wire x1="-160.02" y1="96.52" x2="-157.48" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="TRIG" gate="G$1" pin="TIP"/>
+<wire x1="-157.48" y1="81.28" x2="-166.37" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="CLOCK_IN" gate="G$1" pin="TIP"/>
+<wire x1="-111.76" y1="81.28" x2="-116.84" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-116.84" y1="81.28" x2="-116.84" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="CLOCK_OUT" gate="G$1" pin="TIP"/>
+<wire x1="-116.84" y1="96.52" x2="-111.76" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="-119.38" y1="96.52" x2="-116.84" y2="96.52" width="0.1524" layer="91"/>
+<junction x="-116.84" y="96.52"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="CLOCK_IN" gate="G$1" pin="NORM"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="-111.76" y1="76.2" x2="-118.11" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

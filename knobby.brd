@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -705,6 +705,10 @@ Please make sure your boards conform to these design rules.</description>
 <element name="CLOCK_OUT" library="erthenvar" package="ERTHENVAR-JACK" value="AUDIO-JACKERTHENVAR" x="30.48" y="64.77" rot="R180"/>
 <element name="CV" library="erthenvar" package="ERTHENVAR-JACK" value="AUDIO-JACKERTHENVAR" x="43.18" y="64.77" rot="R180"/>
 <element name="TRIG" library="erthenvar" package="ERTHENVAR-JACK" value="AUDIO-JACKERTHENVAR" x="55.88" y="64.77" rot="R180"/>
+<element name="R2" library="SparkFun-Resistors" package="0603-RES" value="10k" x="43.815" y="55.88" rot="R180"/>
+<element name="R3" library="SparkFun-Resistors" package="0603-RES" value="10k" x="55.88" y="55.88" rot="R180"/>
+<element name="R4" library="SparkFun-Resistors" package="0603-RES" value="10k" x="30.48" y="55.88"/>
+<element name="R13" library="SparkFun-Resistors" package="0603-RES" value="10k" x="20.32" y="55.88"/>
 </elements>
 <signals>
 <signal name="5V">
@@ -791,14 +795,12 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="PAUSE_OUT">
 <contactref element="PAUSE" pad="3"/>
-<contactref element="CLOCK_IN" pad="2"/>
-<wire x1="32.4612" y1="20.0406" x2="32.4612" y2="23.4188" width="0.254" layer="16"/>
-<wire x1="32.4612" y1="23.4188" x2="24.765" y2="31.115" width="0.254" layer="16"/>
-<wire x1="24.765" y1="31.115" x2="24.765" y2="41.91" width="0.254" layer="16"/>
-<wire x1="24.765" y1="41.91" x2="22.86" y2="43.815" width="0.254" layer="16"/>
-<wire x1="22.86" y1="43.815" x2="22.86" y2="59.055" width="0.254" layer="16"/>
-<wire x1="22.86" y1="59.055" x2="17.78" y2="64.135" width="0.254" layer="16"/>
-<wire x1="17.78" y1="64.135" x2="17.78" y2="68.07" width="0.254" layer="16"/>
+<contactref element="R13" pad="2"/>
+<wire x1="32.4612" y1="20.0406" x2="32.4612" y2="22.7838" width="0.254" layer="16"/>
+<wire x1="32.4612" y1="22.7838" x2="24.765" y2="30.48" width="0.254" layer="16"/>
+<wire x1="24.765" y1="30.48" x2="24.765" y2="55.88" width="0.254" layer="16"/>
+<via x="24.765" y="55.88" extent="1-16" drill="0.6"/>
+<wire x1="24.765" y1="55.88" x2="21.17" y2="55.88" width="0.254" layer="1"/>
 </signal>
 <signal name="LOAD">
 <contactref element="U$2" pad="11"/>
@@ -931,13 +933,12 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="46.515" y1="40.005" x2="50.8" y2="35.72" width="0.254" layer="16"/>
 </signal>
 <signal name="CV">
-<contactref element="CV" pad="3"/>
 <contactref element="U$2" pad="17"/>
-<wire x1="35.56" y1="51.435" x2="33.655" y2="53.34" width="0.254" layer="1"/>
-<wire x1="33.655" y1="53.34" x2="33.655" y2="54.61" width="0.254" layer="1"/>
-<wire x1="33.655" y1="54.61" x2="35.56" y2="56.515" width="0.254" layer="1"/>
-<wire x1="35.56" y1="56.515" x2="39.825" y2="56.515" width="0.254" layer="1"/>
-<wire x1="39.825" y1="56.515" x2="43.18" y2="59.87" width="0.254" layer="1"/>
+<contactref element="R2" pad="2"/>
+<wire x1="42.965" y1="55.88" x2="34.29" y2="55.88" width="0.254" layer="1"/>
+<wire x1="34.29" y1="55.88" x2="33.655" y2="55.245" width="0.254" layer="1"/>
+<wire x1="33.655" y1="55.245" x2="33.655" y2="53.34" width="0.254" layer="1"/>
+<wire x1="33.655" y1="53.34" x2="35.56" y2="51.435" width="0.254" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="R1" pad="1"/>
@@ -945,15 +946,12 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="11.43" y1="44.665" x2="11.43" y2="48.26" width="0.254" layer="1"/>
 </signal>
 <signal name="CLOCK">
-<contactref element="CLOCK_IN" pad="3"/>
-<contactref element="CLOCK_OUT" pad="3"/>
 <contactref element="U$2" pad="5"/>
-<wire x1="17.78" y1="59.87" x2="30.48" y2="59.87" width="0.254" layer="1"/>
-<wire x1="35.56" y1="36.195" x2="34.29" y2="36.195" width="0.254" layer="1"/>
-<wire x1="34.29" y1="36.195" x2="33.655" y2="36.83" width="0.254" layer="1"/>
-<wire x1="33.655" y1="36.83" x2="33.655" y2="52.07" width="0.254" layer="1"/>
-<wire x1="33.655" y1="52.07" x2="30.48" y2="55.245" width="0.254" layer="1"/>
-<wire x1="30.48" y1="55.245" x2="30.48" y2="59.87" width="0.254" layer="1"/>
+<contactref element="R4" pad="2"/>
+<wire x1="35.56" y1="36.195" x2="34.925" y2="36.195" width="0.4064" layer="1"/>
+<wire x1="34.925" y1="36.195" x2="33.02" y2="38.1" width="0.254" layer="1"/>
+<wire x1="33.02" y1="38.1" x2="33.02" y2="54.19" width="0.254" layer="1"/>
+<wire x1="33.02" y1="54.19" x2="31.33" y2="55.88" width="0.254" layer="1"/>
 </signal>
 <signal name="INT_CLOCK">
 <contactref element="U$2" pad="3"/>
@@ -965,12 +963,46 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="34.29" y1="17.3482" x2="32.4612" y2="15.5194" width="0.254" layer="16"/>
 </signal>
 <signal name="TRIG">
-<contactref element="TRIG" pad="3"/>
 <contactref element="U$2" pad="19"/>
-<wire x1="35.56" y1="53.975" x2="35.56" y2="55.245" width="0.254" layer="1"/>
-<wire x1="35.56" y1="55.245" x2="36.195" y2="55.88" width="0.254" layer="1"/>
-<wire x1="36.195" y1="55.88" x2="51.89" y2="55.88" width="0.254" layer="1"/>
-<wire x1="51.89" y1="55.88" x2="55.88" y2="59.87" width="0.254" layer="1"/>
+<contactref element="R3" pad="2"/>
+<wire x1="55.03" y1="55.88" x2="47.625" y2="55.88" width="0.254" layer="1"/>
+<wire x1="47.625" y1="55.88" x2="45.72" y2="53.975" width="0.254" layer="1"/>
+<wire x1="45.72" y1="53.975" x2="43.815" y2="53.975" width="0.254" layer="1"/>
+<wire x1="43.815" y1="53.975" x2="42.545" y2="52.705" width="0.254" layer="1"/>
+<wire x1="42.545" y1="52.705" x2="36.83" y2="52.705" width="0.254" layer="1"/>
+<wire x1="36.83" y1="52.705" x2="35.56" y2="53.975" width="0.254" layer="1"/>
+</signal>
+<signal name="N$2">
+<contactref element="R2" pad="1"/>
+<contactref element="CV" pad="3"/>
+<wire x1="43.18" y1="59.87" x2="43.18" y2="59.69" width="0.254" layer="1"/>
+<wire x1="43.18" y1="59.69" x2="45.085" y2="57.785" width="0.254" layer="1"/>
+<wire x1="45.085" y1="57.785" x2="45.085" y2="56.3" width="0.254" layer="1"/>
+<wire x1="45.085" y1="56.3" x2="44.665" y2="55.88" width="0.4064" layer="1"/>
+</signal>
+<signal name="N$3">
+<contactref element="TRIG" pad="3"/>
+<contactref element="R3" pad="1"/>
+<wire x1="55.88" y1="59.87" x2="55.88" y2="56.73" width="0.254" layer="1"/>
+<wire x1="55.88" y1="56.73" x2="56.73" y2="55.88" width="0.254" layer="1"/>
+</signal>
+<signal name="N$4">
+<contactref element="CLOCK_IN" pad="3"/>
+<contactref element="CLOCK_OUT" pad="3"/>
+<contactref element="R4" pad="1"/>
+<wire x1="30.48" y1="59.87" x2="30.48" y2="56.73" width="0.254" layer="1"/>
+<wire x1="30.48" y1="56.73" x2="29.63" y2="55.88" width="0.254" layer="1"/>
+<wire x1="17.78" y1="59.87" x2="25.64" y2="59.87" width="0.254" layer="1"/>
+<wire x1="25.64" y1="59.87" x2="29.63" y2="55.88" width="0.254" layer="1"/>
+</signal>
+<signal name="N$5">
+<contactref element="CLOCK_IN" pad="2"/>
+<contactref element="R13" pad="1"/>
+<wire x1="17.78" y1="68.07" x2="17.78" y2="64.77" width="0.254" layer="1"/>
+<wire x1="17.78" y1="64.77" x2="15.24" y2="62.23" width="0.254" layer="1"/>
+<wire x1="15.24" y1="62.23" x2="15.24" y2="57.785" width="0.254" layer="1"/>
+<wire x1="15.24" y1="57.785" x2="17.145" y2="55.88" width="0.254" layer="1"/>
+<wire x1="17.145" y1="55.88" x2="19.47" y2="55.88" width="0.4064" layer="1"/>
 </signal>
 </signals>
 </board>
